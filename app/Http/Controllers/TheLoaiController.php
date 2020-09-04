@@ -3,13 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Str;
 use App\{ ProductType, Product };
 
 class TheLoaiController extends Controller
 {
     public function getList()
     {
-        $theloai = ProductType::where('active', 1)->get();
+        $theloai = ProductType::all();
         return view('admin.theloai.list',['theloai'=>$theloai]);
     }
 
@@ -90,6 +91,7 @@ class TheLoaiController extends Controller
             {
                 return redirect('admin/theloai/edit/'.$id)->with('error_img','Bạn chọn hình chưa đúng định dạng');
             }
+
             $name = $file->getClientOriginalName();
             $hinh = str_random(5)."-".$name;
             while(file_exists("upload/category/".$hinh))
@@ -97,6 +99,17 @@ class TheLoaiController extends Controller
                 $hinh = str_random(5)."-".$name;
             }
             unlink("upload/category/".$theloai->image);
+            $name = $file->getClientOriginalName();
+            // $file_name = 'placement-'.$lastID.'-'.$name;
+            // if($file->move(storage_path("app/public/documents"), $file_name)){
+            //     $document = new Document;
+            //     $document->table_name = 160;
+            //     $document->document_name = $file_name;
+            //     $document->table_id = $lastID;
+            //     $document->save();
+            // }
+
+                
             $file->move("upload/category/",$hinh);
             $theloai->image = $hinh;
         }
