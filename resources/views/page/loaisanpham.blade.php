@@ -4,7 +4,7 @@
 	<div class="container">
 		<div class="pull-right">
 			<div class="beta-breadcrumb font-large">
-				<a href="/">Home</a> / <span>Sản phẩm</span>
+				<a href="/">Home</a> / <a href="category/{{$ProductType->id}}"><span>{{$ProductType->name}}</span></a>
 			</div>
 		</div>
 		<div class="clearfix"></div>
