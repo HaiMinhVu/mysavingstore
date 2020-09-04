@@ -37,8 +37,13 @@ class PageController extends Controller
     public function getLoaiSanPham($id)
     {
     	$ProductType = ProductType::where('active', 1)->find($id);
-    	$product = Product::where('id_type',$id)->where('active', 1)->paginate(9);
-    	return view('page.loaisanpham',['ProductType'=>$ProductType,'product'=>$product]);
+        if($ProductType){
+            $product = Product::where('id_type',$id)->where('active', 1)->paginate(9);
+            return view('page.loaisanpham',['ProductType'=>$ProductType,'product'=>$product]);
+        }
+        else{
+            return view('page.404');
+        }
     }
 
     public function getSanPham($id)
