@@ -33,7 +33,7 @@ class TheLoaiController extends Controller
         $theloai = new ProductType;
         $theloai->name = $request->name;
         $theloai->description = $request->description;
-        $theloai->alias = str_slug($request->name);
+        $theloai->alias = Str::slug($request->name);
 
         if($request->hasFile('image'))
         {
@@ -79,7 +79,7 @@ class TheLoaiController extends Controller
 
         $theloai->name = $request->name;
         $theloai->description = $request->description;
-        $theloai->alias = str_slug($request->name);
+        $theloai->alias = Str::slug($request->name);
         $theloai->active = $request->active;
 
         if($request->hasFile('image'))
