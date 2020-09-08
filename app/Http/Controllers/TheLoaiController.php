@@ -45,10 +45,10 @@ class TheLoaiController extends Controller
                 return redirect('admin/theloai/add')->with('error_img','Bạn chọn hình không đúng định dạng');
             }
             $name = $file->getClientOriginalName();
-            $hinh = str_random(5)."-".$name;
+            $hinh = Str::random(5)."-".$name;
             while(file_exists("upload/category/".$hinh))
             {
-                $hinh = str_random(5)."-".$name;
+                $hinh = Str::random(5)."-".$name;
             }
             $file->move("upload/category/",$hinh);
             $theloai->image = $hinh;
@@ -93,10 +93,10 @@ class TheLoaiController extends Controller
             }
 
             $name = $file->getClientOriginalName();
-            $hinh = str_random(5)."-".$name;
+            $hinh = Str::random(5)."-".$name;
             while(file_exists("upload/category/".$hinh))
             {
-                $hinh = str_random(5)."-".$name;
+                $hinh = Str::random(5)."-".$name;
             }
             unlink("upload/category/".$theloai->image);
             $name = $file->getClientOriginalName();

@@ -29,8 +29,8 @@ class PageController extends Controller
 
     public function home()
     {
-    	$newproduct = Product::where('new',1)->where('active', 1)->take(4)->get();
-    	$topproduct = Product::where('promotion_price','>',0)->where('active', 1)->take(4)->get();
+    	$newproduct = Product::where('new',1)->where('active', 1)->inRandomOrder()->limit(4)->get();
+    	$topproduct = Product::where('promotion_price','>',0)->where('active', 1)->inRandomOrder()->limit(4)->get();
     	return view('page.home',['newproduct'=>$newproduct,'topproduct'=>$topproduct]);
     }
 

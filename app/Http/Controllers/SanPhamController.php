@@ -3,8 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Product;
-use App\ProductType;
+use Str;
+use App\{ ProductType, Product };
 
 class SanPhamController extends Controller
 {
@@ -60,10 +60,10 @@ class SanPhamController extends Controller
                 return redirect('admin/sanpham/add')->with('error_img','Ảnh không đúng định dạng');
             }
             $name = $file->getClientOriginalName();
-            $hinh = str_random(5)."-".$name;
+            $hinh = Str::random(5)."-".$name;
             while(file_exists("upload/product/".$hinh))
             {
-                $hinh = str_random(5)."-".$name;
+                $hinh = Str::random(5)."-".$name;
             }
             $file->move("upload/product/",$hinh);
             $sanpham->image = $hinh;
@@ -122,10 +122,10 @@ class SanPhamController extends Controller
                 return redirect('admin/sanpham/edit/'.$id)->with('error_img','Bạn chọn hình chưa đúng định dạng');
             }
             $name = $file->getClientOriginalName();
-            $hinh = str_random(5)."-".$name;
+            $hinh = Str::random(5)."-".$name;
             while(file_exists("upload/product/".$hinh))
             {
-                $hinh = str_random(5)."-".$name;
+                $hinh = Str::random(5)."-".$name;
             }
             if(file_exists("upload/product/".$sanpham->image))
             {
