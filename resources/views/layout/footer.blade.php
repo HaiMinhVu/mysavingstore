@@ -20,7 +20,7 @@
 					<div>
 						<div class="contact-info">
 							<i class="fa fa-map-marker"></i>
-							<p>4009 Knollbrook ln, Fort Worth, TX 76137</p>
+							<p>Fort Worth, TX 76137</p>
 							<p>Phone: 682 559 4341</p>
 						</div>
 					</div>
