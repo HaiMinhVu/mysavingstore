@@ -24,13 +24,13 @@
 	</div> -->
 
 	<!-- .header-body -->
-	<!-- <div class="header-body"> -->
-		<!-- <div class="container beta-relative"> -->
-			<!-- <div class="pull-left">
+	<!-- <div class="header-body">
+		<div class="container beta-relative">
+			<div class="pull-left">
 				<a href="index.html" id="logo"><img src="assets/dest/images/logo-cake.png" width="200px" alt=""></a>
-			</div> -->
-			<!-- <div class="pull-right beta-components space-left ov"> -->
-				<!-- <div class="space10">&nbsp;</div>
+			</div>
+			<div class="pull-right beta-components space-left ov">
+				<div class="space10">&nbsp;</div>
 				<div class="beta-comp">
 					<form role="search" method="post" id="searchform" action="search">
 						<input type="hidden" name="_token" value="{{csrf_token()}}">
@@ -88,28 +88,41 @@
 				</div> -->
 			<!-- </div>
 			<div class="clearfix"></div>
-		</div> -->
-	<!-- </div>  -->
+		</div>
+	</div>  -->
+
 	<div class="header-bottom" style="background-color: #0277b8;">
-		
-		<div class="container">
-			<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text'>Menu</span> <i class="fa fa-bars"></i></a>
-			<div class="visible-xs clearfix"></div>
-			<nav class="main-menu">
-				<ul class="l-inline ov">
-					<li><a href="home">Home</a></li>
-					<li><a>Product</a>
-						<ul class="sub-menu">
-							@foreach($menu as $row_menu)
-							<li><a href="category/{{$row_menu->id}}">{{$row_menu->name}}</a></li>
-							@endforeach
-						</ul>
-					</li>
-					<!-- <li><a href="news">News</a></li> -->
-					<li><a href="contact">Contact Us</a></li>
-				</ul>
-				<div class="clearfix"></div>
-			</nav>
-		</div> <!-- .container -->
-	</div> <!-- .header-bottom -->
-</div> <!-- #header -->
+		<div class="container beta-relative">
+			<div class="pull-left">
+				<a class="visible-xs beta-menu-toggle pull-right" href="#"><span class='beta-menu-toggle-text'>Menu</span> <i class="fa fa-bars"></i></a>
+				<div class="visible-xs clearfix"></div>
+				<nav class="main-menu">
+					<ul class="l-inline ov">
+						<li><a href="home">Home</a></li>
+						<li><a>Product</a>
+							<ul class="sub-menu">
+								@foreach($menu as $row_menu)
+								<li><a href="category/{{$row_menu->id}}">{{$row_menu->name}}</a></li>
+								@endforeach
+							</ul>
+						</li>
+						<!-- <li><a href="news">News</a></li> -->
+						<li><a href="contact">Contact Us</a></li>
+					</ul>
+					<div class="clearfix"></div>
+				</nav>
+			</div>
+			<div class="pull-right beta-components space-left ov">
+				<div class="space10">&nbsp;</div>
+				<div class="beta-comp">
+					<form role="search" method="post" id="searchform" action="search">
+						<input type="hidden" name="_token" value="{{csrf_token()}}">
+				        <input type="text" value="" name="tukhoa" id="s" placeholder="Search..." required />
+				        <button class="fa fa-search" type="submit" id="searchsubmit"></button>
+					</form>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</div>

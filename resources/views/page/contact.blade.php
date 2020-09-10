@@ -19,7 +19,7 @@
 		
 		<div class="space50">&nbsp;</div>
 		<div class="row">
-			<div class="col-sm-8">
+			<!-- <div class="col-sm-8">
 				<h2>Contact Form</h2>
 				<div class="space20">&nbsp;</div>
 				<p>Please fill out the form below.</p>
@@ -41,28 +41,32 @@
 						<button type="submit" class="beta-btn primary">Send Message <i class="fa fa-chevron-right"></i></button>
 					</div>
 				</form>
-			</div>
+			</div> -->
 			<div class="col-sm-4">
 				<h2>Contact Information</h2>
 				<div class="space20">&nbsp;</div>
-
-				<h6 class="contact-title">Address</h6>
+				<h6 class="contact-title">
+					Please pick up at Fort Worth 76137<br>
+					Cash, Zelle, Venmo only
+				</h6>
+				<br>
+				<!-- <h6 class="contact-title">Address</h6>
 				<p>
 					4009 Knollbrook ln<br>
 					Fort Worth, TX 76137
-				</p>
+				</p> -->
 				<div class="space20">&nbsp;</div>
 				<h6 class="contact-title">Email</h6>
 				<p>
-					<a href="mailto:biz@betadesign.com">annhieukhivui2007@yahoo.com</a>
+					annhieukhivui2007@yahoo.com
 				</p>
 			</div>
 		</div>
-	</div> <!-- #content -->
-</div> <!-- .container -->
+	</div>
+</div>
 
 <div class="beta-map">
 	
-	<div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=4009%20Knollbrook%20Lane,%20Fort%20Worth,%20TX,%20USA+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" ></iframe></div>
+	<div class="abs-fullwidth beta-map wow flipInX"><iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=76137+()&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed" ></iframe></div>
 </div>
 @endsection
